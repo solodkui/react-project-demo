@@ -2,6 +2,7 @@
 import cn from 'classnames';
 
 // * Components
+import Navigation from '../Navigation/Navigation';
 import Logo from '../Logo/Logo';
 
 // * Styles
@@ -12,8 +13,7 @@ function Header() {
     <header className={styles.header}>
       <div className={cn('wrapper', styles.wrapper)}>
         <Logo />
-        {/* TODO Need Navigation component */}
-        <p>NAVIGATION</p>
+        <Navigation />
       </div>
     </header>
   );

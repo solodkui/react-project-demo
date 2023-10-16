@@ -53,8 +53,8 @@
 body {
   background-color: var(--c-silver);
   font-family: var(--f-base);
-  color: var(--c-black);
-  font-size: 14px;
+  color: var(--c-blue);
+  font-size: 16px;
 }
 
 /* * Icon */
@@ -87,12 +87,8 @@ img {
 /* * Link */
 a {
   text-decoration: none;
-  color: var(--c-orange);
+  color: var(--c-blue);
   cursor: pointer;
-}
-
-a:hover {
-  color: var(--c-orange-light);
 }
 
 /* * Button */
@@ -121,6 +117,11 @@ p {
   cursor: default;
 }
 
+/* * List */
+ul {
+  list-style-type: none;
+}
+
 /* * Wrapper */
 .wrapper {
   padding-right: 20px;
@@ -128,4 +129,13 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+}
+
+.link {
+  transition: var(--t-normal);
+  font-weight: 600;
+}
+
+.link:hover {
+  color: var(--c-orange);
 }

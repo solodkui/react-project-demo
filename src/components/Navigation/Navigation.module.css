@@ -1,0 +1,4 @@
+.list {
+  display: flex;
+  grid-gap: 20px;
+}
