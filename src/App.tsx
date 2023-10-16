@@ -14,6 +14,7 @@ function App() {
       <div className={styles.content}>
         <Outlet />
       </div>
+      {/* TODO Footer */}
     </>
   );
 }
