@@ -1,0 +1,40 @@
+.wrapper {
+  transition: color var(--t-normal);
+  color: var(--c-blue);
+  align-items: center;
+  display: flex;
+}
+
+.wrapper:hover {
+  color: var(--c-blue-dark);
+}
+
+.wrapper:hover .content {
+  border-color: var(--c-blue-dark);
+}
+
+.icon {
+  font-size: 100px;
+}
+
+.content {
+  border-left: 3px solid var(--c-blue);
+  flex-direction: column;
+  padding-left: 5px;
+  margin-left: 5px;
+  line-height: 1;
+  display: flex;
+}
+
+
+.title {
+  font-family: var(--f-logo);
+  font-size: 70px;
+}
+
+.subtitle {
+  font-style: italic;
+  font-weight: 600;
+  text-align: end;
+  font-size: 10px;
+}

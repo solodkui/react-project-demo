@@ -1,26 +1,127 @@
+/* * Root */
 :root {
-  --c-black: #000;
-  --c-white: #fff;
-  --c-primary: #007bff;
+  /* Colors */
+  --c-black: #000000;
+  --c-white: #ffffff;
+  --c-silver: #f5f5f5; /* Головний колір фону */
+  --c-silver-2: #d9d9d9; /* Для футера та вспливаючих вікон */
+  --c-blue: #0074e4; /* Головний колір */
+  --c-blue-60: #0074e466;
+  --c-blue-dark: #003366; /* Для заголовків */
+  --c-orange: #ff8800; /* Акцентний колір для кнопок та акцентів */
+  --c-orange-light: #ffa633; /* Світлий відтінок оранжевого для підсвічування */
+  --c-green: #33cc33; /* Для важливих повідомлень
+  /* Fonts */
+  --f-base: 'Montserrat', sans-serif;
+  --f-logo: 'Dela Gothic One', cursive;
+  /* Transition */
+  --t-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* * Global */
 * {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+*::selection {
+  background-color: var(--c-blue);
+  color: var(--c-white);
+}
+
+*::-webkit-scrollbar {
+  border-radius: 3px;
+  position: relative;
+  z-index: 999;
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--c-blue);
+  color: var(--c-white);
+  border-radius: 3px;
+  outline: none;
+}
+
+/* * Body */
 body {
-  background-color: var(--c-white);
+  background-color: var(--c-silver);
+  font-family: var(--f-base);
   color: var(--c-black);
   font-size: 14px;
 }
 
-a {
-  text-decoration: none;
-  color: var(--c-white);
+/* * Icon */
+.icon {
+  display: inline-block;
+  stroke: currentColor;
+  fill: currentColor;
+  stroke-width: 0;
+  height: 1em;
+  width: 1em;
 }
 
+/* * Titles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+  cursor: default;
+  margin-top: 0;
+}
+
+/* * Image */
+img {
+  width: 100%;
+}
+
+/* * Link */
+a {
+  text-decoration: none;
+  color: var(--c-orange);
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--c-orange-light);
+}
+
+/* * Button */
+button {
+  background-color: transparent;
+  color: var(--c-black);
+  cursor: pointer;
+  border: none;
+}
+
+/* * Input, textarea */
+input,
+textarea {
+  background-color: transparent;
+  line-height: 1;
+  outline: none;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+/* * Paragraph */
+p {
+  cursor: default;
+}
+
+/* * Wrapper */
 .wrapper {
   padding-right: 20px;
   padding-left: 20px;

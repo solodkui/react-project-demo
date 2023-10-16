@@ -1,5 +1,5 @@
 const BASE = {
-  projectName: 'ReactProjectDemo',
+  projectName: 'Camelot Academy',
   api: '',
 };
 
