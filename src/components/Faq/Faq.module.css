@@ -1,0 +1,31 @@
+.faq {
+  padding-top: 80px;
+}
+
+.title {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.list {
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  display: grid;
+  gap: 20px;
+}
+
+.item {
+  margin-bottom: 30px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.item:nth-child(5) {
+  grid-column-start: 3;
+}
+
+.subtitle {
+  margin-bottom: 10px;
+}

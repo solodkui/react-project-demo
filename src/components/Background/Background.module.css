@@ -1,0 +1,37 @@
+.wrapper {
+  justify-content: center;
+  pointer-events: none;
+  align-items: center;
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.circle {
+  background-color: var(--c-blue);
+  border-radius: 50%;
+  position: absolute;
+  margin-left: -40vh;
+  opacity: 0.07;
+  height: 80vh;
+  width: 80vh;
+  top: 5vh;
+  left: 0;
+}
+
+.circle_1 {
+  margin-right: -35vh;
+  margin-left: auto;
+  opacity: 0.12;
+  height: 70vh;
+  width: 70vh;
+  left: auto;
+  top: 30vh;
+  right: 0;
+}

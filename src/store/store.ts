@@ -4,10 +4,16 @@ import updateStorage from './storage';
 
 // * Store
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    // user: userSlice,
+  },
 });
 
 updateStorage<{ theme: string }>(store.getState(), 'theme', 'dark');
+
+// store.subscribe(() => {
+//   saveState({ jwt: store.getState().user.jwt }, JWT_KEY);
+// });
 
 // * Exports
 // Types

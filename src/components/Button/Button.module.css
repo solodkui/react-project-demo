@@ -1,0 +1,17 @@
+.button {
+  transition: background var(--t-normal);
+  background-color: var(--c-orange);
+  color: var(--c-white);
+  padding-right: 25px;
+  border-radius: 20px;
+  align-items: center;
+  padding-left: 25px;
+  width: fit-content;
+  line-height: 1;
+  display: flex;
+  height: 45px;
+}
+
+.button:hover {
+  background-color: var(--c-orange-light);
+}

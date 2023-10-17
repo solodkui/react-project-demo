@@ -1,4 +1,7 @@
+// * Base
 import { Link } from 'react-router-dom';
+
+// * Styles
 import styles from './Navigation.module.css';
 
 const LIST = [
@@ -10,7 +13,7 @@ const LIST = [
     path: '/about',
     title: 'Про нас',
   },
-];
+] as const;
 
 function Navigation() {
   return (
@@ -18,7 +21,7 @@ function Navigation() {
       <ul className={styles.list}>
         {LIST.map(({ path, title }) => (
           <li key={'navigation-' + path}>
-            <Link to={path} className='link'>
+            <Link to={path} className='link' title={title}>
               {title}
             </Link>
           </li>

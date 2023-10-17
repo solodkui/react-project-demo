@@ -1,20 +1,20 @@
-// * BaseF
-import changeTitle from '../../helpers/title';
-import { useEffect } from 'react';
+// * Base
+import useTitle from '../../hooks/use-title.hook';
+
+// * Components
+import Banner from '../../components/Banner/Banner';
 
 // * Styles
 import styles from './Home.module.css';
+import Faq from '../../components/Faq/Faq';
 
 function Home() {
-  useEffect(() => {
-    changeTitle('Home');
-  }, []);
+  useTitle({ title: 'Home' });
 
   return (
     <div className={styles.home}>
-      <div className='wrapper'>
-        <h1>Home</h1>
-      </div>
+      <Banner />
+      <Faq />
     </div>
   );
 }

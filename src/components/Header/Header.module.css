@@ -1,8 +1,15 @@
 .header {
+  transition: var(--t-normal);
   position: fixed;
+  z-index: 300;
   right: 0;
   left: 0;
   top: 0;
+}
+
+.open {
+  box-shadow: 0 0 8px 0 var(--c-blue-dark);
+  background-color: var(--c-white);
 }
 
 .wrapper {
