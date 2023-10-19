@@ -21,7 +21,7 @@ function Navigation() {
       <ul className={styles.list}>
         {LIST.map(({ path, title }) => (
           <li key={'navigation-' + path}>
-            <Link to={path} className='link' title={title}>
+            <Link to={path} className={styles.link} title={title}>
               {title}
             </Link>
           </li>

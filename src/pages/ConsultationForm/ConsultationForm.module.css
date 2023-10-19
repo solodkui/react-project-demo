@@ -1,0 +1,29 @@
+.consultationForm {
+  padding-top: 200px;
+}
+
+.wrapper {
+  grid-template-columns: 3fr 2fr;
+  font-family: 20px;
+  display: grid;
+}
+
+.title {
+  text-shadow: 2px 2px 3px var(--c-black-40);
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  text-shadow: 2px 2px 3px var(--c-black-40);
+}
+
+.form {
+  flex-direction: column;
+  display: flex;
+  gap: 20px;
+}
+
+.formFooter {
+  justify-content: center;
+  display: flex;
+}

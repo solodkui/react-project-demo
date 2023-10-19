@@ -1,1 +1,3 @@
-# React project demo
+# Camelot Academy
+
+# [Alpha channels](info/alpha-channels.md)

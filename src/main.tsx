@@ -1,6 +1,7 @@
 // * Base
 import { RouterProvider } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import React from 'react';
 
 // * Store
@@ -11,7 +12,6 @@ import router from './routes.tsx';
 
 // * Styles(global)
 import './index.css';
-import { Provider } from 'react-redux';
 
 // * Render
 ReactDOM.createRoot(document.getElementById('root')!).render(

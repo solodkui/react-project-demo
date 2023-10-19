@@ -9,7 +9,7 @@ import styles from './Home.module.css';
 import Faq from '../../components/Faq/Faq';
 
 function Home() {
-  useTitle({ title: 'Home' });
+  useTitle({ title: 'Головна' });
 
   return (
     <div className={styles.home}>

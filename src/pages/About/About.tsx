@@ -1,3 +1,6 @@
+// * Base
+import useTitle from '../../hooks/use-title.hook';
+
 // * Components
 import Wrapper from '../../components/Wrapper/Wrapper';
 
@@ -5,6 +8,8 @@ import Wrapper from '../../components/Wrapper/Wrapper';
 import styles from './About.module.css';
 
 function About() {
+  useTitle({ title: 'Про нас' });
+
   return (
     <div className={styles.about}>
       <Wrapper className={[styles.wrapper]}>

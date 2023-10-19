@@ -9,10 +9,12 @@ import App from './App';
 import Loading from './components/Loading/Loading';
 
 // * Pages
-const Courses = lazy(() => import('./pages/Courses/Courses'));
-const Error = lazy(() => import('./pages/Error/Error'));
-const Home = lazy(() => import('./pages/Home/Home'));
-const About = lazy(() => import('./pages/About/About'));
+const ConsultationForm = lazy(() => import('./pages/ConsultationForm/ConsultationForm')),
+  PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy/PrivacyPolicy')),
+  Courses = lazy(() => import('./pages/Courses/Courses')),
+  Error = lazy(() => import('./pages/Error/Error')),
+  About = lazy(() => import('./pages/About/About')),
+  Home = lazy(() => import('./pages/Home/Home'));
 
 // * Routers
 export default createBrowserRouter([
@@ -41,6 +43,22 @@ export default createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <About />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/consultation-form',
+        element: (
+          <Suspense fallback={<Loading />}>
+            <ConsultationForm />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/privacy-policy',
+        element: (
+          <Suspense fallback={<Loading />}>
+            <PrivacyPolicy />
           </Suspense>
         ),
       },
