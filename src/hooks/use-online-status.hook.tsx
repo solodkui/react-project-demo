@@ -17,6 +17,8 @@ function useOnlineStatus() {
       window.removeEventListener('offline', setOfflineStatus);
     };
   }, [setOnlineStatus, setOfflineStatus]);
+
+  return isOnline;
 }
 
 export default useOnlineStatus;
