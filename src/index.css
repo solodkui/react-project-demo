@@ -15,8 +15,12 @@
   /* Fonts */
   --f-base: 'Montserrat', sans-serif;
   --f-logo: 'Dela Gothic One', cursive;
+  /* Cubic bezier */
+  --cb-normal: cubic-bezier(0.4, 0, 0.2, 1);
   /* Transition */
-  --t-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --t-normal: 0.35s var(--cb-normal);
+  /* Box shadow */
+  --bs-normal: 2px 2px 3px var(--c-black-40);
 }
 
 /* * Global */

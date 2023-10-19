@@ -1,0 +1,17 @@
+.notification {
+  background-color: var(--c-white);
+  box-shadow: var(--bs-normal);
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px 20px;
+  position: fixed;
+  cursor: pointer;
+  line-height: 1;
+  bottom: 20px;
+  right: 20px;
+}
+
+.error {
+  background-color: var(--c-orange);
+  color: var(--c-white);
+}

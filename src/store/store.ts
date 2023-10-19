@@ -1,19 +1,14 @@
 // * Base
 import { configureStore } from '@reduxjs/toolkit';
-import updateStorage from './storage';
 
-// * Store
+// * Slices
+import notificationSlice from './notification.slice';
+
 const store = configureStore({
   reducer: {
-    // user: userSlice,
+    notification: notificationSlice,
   },
 });
-
-updateStorage<{ theme: string }>(store.getState(), 'theme', 'dark');
-
-// store.subscribe(() => {
-//   saveState({ jwt: store.getState().user.jwt }, JWT_KEY);
-// });
 
 // * Exports
 // Types
