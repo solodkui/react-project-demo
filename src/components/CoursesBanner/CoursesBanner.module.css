@@ -1,0 +1,27 @@
+.coursesBanner {
+  background-color: var(--c-blue-dark);
+  justify-content: center;
+  color: var(--c-white);
+  padding-bottom: 5vh;
+  align-items: center;
+  padding-top: 140px;
+  height: 100vh;
+  display: flex;
+}
+
+.wrapper {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.title {
+  font-family: var(--f-logo);
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+.image {
+  margin-bottom: 5vh;
+  max-width: 400px;
+}

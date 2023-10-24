@@ -15,3 +15,8 @@
 .button:hover {
   background-color: var(--c-orange-light);
 }
+
+.white {
+  background-color: var(--c-white);
+  color: var(--c-black);
+}

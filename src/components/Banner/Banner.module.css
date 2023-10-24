@@ -24,6 +24,10 @@
   line-height: 62px;
 }
 
+.image {
+  max-width: 700px;
+}
+
 .info {
   padding-right: 100px;
   position: relative;

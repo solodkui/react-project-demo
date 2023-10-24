@@ -2,7 +2,7 @@
 import { TIconType } from '../Icon/Icon.data';
 
 const LIST: Array<{ title: string; icon: TIconType }> = [
-  {
+  { 
     title: 'Money up',
     icon: 'money',
   },

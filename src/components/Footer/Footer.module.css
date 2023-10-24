@@ -1,0 +1,42 @@
+.footer {
+  background-color: var(--c-blue);
+}
+
+.wrapper {
+  justify-content: space-between;
+  padding-bottom: 20px;
+  align-items: center;
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 50px;
+  display: grid;
+}
+
+.link {
+  transition: var(--t-normal);
+  color: var(--c-white);
+  align-items: center;
+  font-weight: 600;
+  display: flex;
+  gap: 10px;
+}
+
+.link:hover {
+  color: var(--c-orange);
+}
+
+.social {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.other {
+  color: var(--c-white);
+  cursor: default;
+  display: flex;
+  gap: 5px;
+}

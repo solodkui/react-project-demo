@@ -10,6 +10,7 @@ import Notification from './components/Notification/Notification';
 import Background from './components/Background/Background';
 import Offline from './components/Offline/Offline';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const notificationData = useSelector((s: TRootState) => s.notification);
@@ -26,7 +27,7 @@ function App() {
           {notificationData.text && (
             <Notification type={notificationData.type} text={notificationData.text} onClick={() => dispatch(hideNotification())} />
           )}
-          {/* TODO Footer */}
+          <Footer />
         </>
       ) : (
         <Offline />
