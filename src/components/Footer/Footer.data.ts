@@ -35,7 +35,7 @@ export const LINKS: Readonly<TItem[]> = [
   },
   {
     title: 'Політика конфіндеційності',
-    path: '/privacy',
+    path: '/privacy-policy',
   },
   {
     title: 'Карта сайта',
