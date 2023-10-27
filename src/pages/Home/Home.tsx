@@ -2,11 +2,11 @@
 import useTitle from '../../hooks/use-title.hook';
 
 // * Components
+import FaqContent from '../../components/FaqContent/FaqContent';
 import Banner from '../../components/Banner/Banner';
 
 // * Styles
 import styles from './Home.module.css';
-import Faq from '../../components/Faq/Faq';
 
 function Home() {
   useTitle({ title: 'Головна' });
@@ -14,7 +14,7 @@ function Home() {
   return (
     <div className={styles.home}>
       <Banner />
-      <Faq />
+      <FaqContent />
     </div>
   );
 }

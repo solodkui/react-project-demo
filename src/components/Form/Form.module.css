@@ -1,0 +1,27 @@
+.form {
+  color: var(--c-black);
+  display: grid;
+  gap: 20px;
+}
+
+.button {
+  margin: 0 auto;
+}
+
+.access {
+  align-items: center;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1;
+  display: flex;
+  gap: 5px;
+}
+
+.link {
+  transition: color var(--t-normal);
+  color: var(--c-blue-dark);
+}
+
+.link:hover {
+  color: var(--c-orange);
+}

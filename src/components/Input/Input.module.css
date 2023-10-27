@@ -12,10 +12,45 @@
 }
 
 .input {
+  border-bottom: 2px solid var(--c-silver);
+  transition: border-color var(--t-normal);
   background-color: var(--c-silver);
   color: var(--c-black);
   padding-right: 20px;
   padding-left: 20px;
   font-size: 16px;
   height: 40px;
+}
+
+.input:focus {
+  border-color: var(--c-blue);
+}
+
+.error {
+  color: var(--c-red);
+  padding-top: 5px;
+  font-size: 14px;
+  line-height: 1;
+  height: 20px;
+}
+
+.label {
+  border: 1px solid var(--c-black);
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  height: 20px;
+  width: 20px;
+}
+
+.icon {
+  transition: opacity 0.2s var(--cb-normal);
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
 }

@@ -1,5 +1,11 @@
 .footer {
   background-color: var(--c-blue);
+  position: fixed;
+  height: 140px;
+  z-index: 300;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .wrapper {

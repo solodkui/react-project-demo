@@ -1,3 +1,4 @@
+'use client';
 // * Base
 import useTitle from '../../hooks/use-title.hook';
 

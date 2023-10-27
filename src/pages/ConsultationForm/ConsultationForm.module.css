@@ -1,4 +1,5 @@
 .consultationForm {
+  padding-bottom: 200px;
   padding-top: 200px;
 }
 
@@ -6,6 +7,7 @@
   grid-template-columns: 3fr 2fr;
   font-family: 20px;
   display: grid;
+  gap: 20px;
 }
 
 .title {
@@ -15,15 +17,4 @@
 
 .subtitle {
   text-shadow: 2px 2px 3px var(--c-black-40);
-}
-
-.form {
-  flex-direction: column;
-  display: flex;
-  gap: 20px;
-}
-
-.formFooter {
-  justify-content: center;
-  display: flex;
 }

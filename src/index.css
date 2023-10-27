@@ -11,7 +11,8 @@
   --c-blue-dark: #003366; /* Для заголовків */
   --c-orange: #ff8800; /* Акцентний колір для кнопок та акцентів */
   --c-orange-light: #ffa633; /* Світлий відтінок оранжевого для підсвічування */
-  --c-green: #33cc33; /* Для важливих повідомлень
+  --c-green: #33cc33; /* Для важливих повідомлень */
+  --c-red: #ff6b6b;
   /* Fonts */
   --f-base: 'Montserrat', sans-serif;
   --f-logo: 'Dela Gothic One', cursive;
@@ -32,7 +33,7 @@
 }
 
 *::selection {
-  background-color: var(--c-blue);
+  background-color: var(--c-orange);
   color: var(--c-white);
 }
 
@@ -115,4 +116,9 @@ p {
 /* * List */
 ul {
   list-style-type: none;
+}
+
+/* * Inputs */
+input[type='checkbox'] {
+  display: none;
 }

@@ -27,7 +27,7 @@ export const LINKS: Readonly<TItem[]> = [
   },
   {
     title: 'Умови використання',
-    path: '/terms',
+    path: '/terms-of-use',
   },
   {
     title: 'Підтримка',
@@ -43,7 +43,7 @@ export const LINKS: Readonly<TItem[]> = [
   },
   {
     title: 'Посилання',
-    path: '/links',
+    path: '/useful-links',
   },
 ];
 
