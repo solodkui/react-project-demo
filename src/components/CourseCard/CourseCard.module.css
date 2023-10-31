@@ -1,0 +1,22 @@
+.course {
+  border: 2px solid var(--c-white);
+  background-color: var(--c-white);
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  padding: 20px;
+  color: var(--c-blue);
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.button {
+  margin: 0 auto;
+}

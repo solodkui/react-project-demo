@@ -1,9 +1,9 @@
 // * Base
-import { hideNotification } from './store/notification.slice';
 import useOnlineStatus from './hooks/use-online-status.hook';
-import { TAppDispatch, TRootState } from './store/store';
-import { useDispatch, useSelector } from 'react-redux';
+import { TRootState } from './store/store';
+import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
+import { memo } from 'react';
 
 // * Components
 import Notification from './components/Notification/Notification';
@@ -12,28 +12,30 @@ import Offline from './components/Offline/Offline';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
-function App() {
+// * Memoized
+const MemoizedNotification = memo(() => {
   const notificationData = useSelector((s: TRootState) => s.notification);
-  const dispatch = useDispatch<TAppDispatch>();
-  const isOnline = useOnlineStatus();
+  return <>{notificationData.text && <Notification type={notificationData.type} text={notificationData.text} />}</>;
+});
 
+// * Online
+function Online() {
   return (
     <>
-      {isOnline ? (
-        <>
-          <Header />
-          <Outlet />
-          <Background />
-          {notificationData.text && (
-            <Notification type={notificationData.type} text={notificationData.text} onClick={() => dispatch(hideNotification())} />
-          )}
-          <Footer />
-        </>
-      ) : (
-        <Offline />
-      )}
+      <Header />
+      <Outlet />
+      <Background />
+      <MemoizedNotification />
+      <Footer />
     </>
   );
 }
 
-export default App;
+// * App
+function App() {
+  const isOnline = useOnlineStatus();
+  return <>{isOnline ? <Online /> : <Offline />}</>;
+}
+
+// * Export
+export default memo(App);

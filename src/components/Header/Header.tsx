@@ -1,13 +1,11 @@
 // * Base
-import { memo, useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import cn from 'classnames';
 
 // * Components
 import Navigation from '../Navigation/Navigation';
 import Wrapper from '../Wrapper/Wrapper';
 import Logo from '../Logo/Logo';
-
-const MemoizedNavigation = memo(Navigation);
 
 // * Styles
 import styles from './Header.module.css';
@@ -33,7 +31,7 @@ function Header() {
     <header className={cn([styles.header, isOpen && styles.open, isWhite && styles.white])}>
       <Wrapper className={[styles.wrapper]}>
         <Logo smallMode={isOpen} />
-        <MemoizedNavigation />
+        <Navigation />
       </Wrapper>
     </header>
   );

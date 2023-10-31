@@ -15,14 +15,19 @@ const ConsultationForm = lazy(() => import('./pages/ConsultationForm/Consultatio
   UsefulLinks = lazy(() => import('./pages/UsefulLinks/UsefulLinks')),
   TermsOfUse = lazy(() => import('./pages/TermsOfUse/TermsOfUse')),
   Support = lazy(() => import('./pages/Support/Support')),
-  Courses = lazy(() => import('./pages/Courses/Courses')),
   SiteMap = lazy(() => import('./pages/SiteMap/SiteMap')),
   Error = lazy(() => import('./pages/Error/Error')),
   About = lazy(() => import('./pages/About/About')),
   Blog = lazy(() => import('./pages/Blog/Blog')),
   Home = lazy(() => import('./pages/Home/Home')),
-  Faq = lazy(() => import('./pages/Faq/Faq'));
+  Faq = lazy(() => import('./pages/Faq/Faq')),
+  // * Courses
+  CoursesMain = lazy(() => import('./pages/Courses/CoursesMain/CoursesMain')),
+  Frontend = lazy(() => import('./pages/Courses/Frontend/Frontend')),
+  English = lazy(() => import('./pages/Courses/English/English')),
+  Courses = lazy(() => import('./pages/Courses/Courses'));
 
+// * Element
 function Element({ component }: { component: ReactNode }) {
   return <Suspense fallback={<Loading />}>{component}</Suspense>;
 }
@@ -31,7 +36,7 @@ function Element({ component }: { component: ReactNode }) {
 export default createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Element component={<App />} />,
     children: [
       {
         path: '/',
@@ -40,6 +45,20 @@ export default createBrowserRouter([
       {
         path: '/courses',
         element: <Element component={<Courses />} />,
+        children: [
+          {
+            path: '',
+            element: <Element component={<CoursesMain />} />,
+          },
+          {
+            path: 'frontend',
+            element: <Element component={<Frontend />} />,
+          },
+          {
+            path: 'english',
+            element: <Element component={<English />} />,
+          },
+        ],
       },
       {
         path: '/about',

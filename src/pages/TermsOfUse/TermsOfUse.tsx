@@ -7,13 +7,16 @@ import Wrapper from '../../components/Wrapper/Wrapper';
 // * Styles
 import styles from './TermsOfUse.module.css';
 
+// * Static
+const TITLE = 'Умови використання';
+
 function TermsOfUse() {
-  useTitle({ title: 'Правила використання' });
+  useTitle({ title: TITLE });
 
   return (
     <section className={styles.termsOfUse}>
       <Wrapper>
-        <h1>Правила використання</h1>
+        <h1>{TITLE}</h1>
       </Wrapper>
     </section>
   );

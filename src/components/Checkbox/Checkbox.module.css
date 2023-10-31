@@ -1,0 +1,20 @@
+.label {
+  border: 1px solid var(--c-black);
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  height: 20px;
+  width: 20px;
+}
+
+.icon {
+  transition: opacity 0.2s var(--cb-normal);
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}

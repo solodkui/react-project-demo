@@ -1,0 +1,26 @@
+.breadcrumbs {
+  padding-bottom: 10px;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+}
+
+.line {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.link {
+  transition: color var(--t-normal);
+  color: var(--c-blue-dark);
+}
+
+.link:hover {
+  color: var(--c-orange);
+}
+
+.title {
+  color: var(--c-black);
+  cursor: default;
+}
