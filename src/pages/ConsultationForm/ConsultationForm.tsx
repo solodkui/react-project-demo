@@ -16,7 +16,9 @@ function ConsultationForm() {
       <Wrapper className={[styles.wrapper]}>
         <div>
           <h1 className={styles.title}>Форма консультації</h1>
-          <p className={styles.subtitle}>Заповніть анкету і отримайте безкоштовну пораду з питань освіти в Академії та майбутньої кар'єри в ІТ.</p>
+          <p className={styles.subtitle}>
+            Заповніть анкету і отримайте безкоштовну пораду з питань освіти в Академії та майбутньої кар'єри в ІТ.
+          </p>
         </div>
         <Form />
       </Wrapper>

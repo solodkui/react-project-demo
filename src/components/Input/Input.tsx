@@ -18,7 +18,13 @@ const Input = memo(function ({ type, title = '', value, error, onChange }: TProp
       <label htmlFor={id} className={styles.title} title={title}>
         {title}
       </label>
-      <input onChange={onChange} type={type} className={cn([styles.input, error && styles.error])} id={id} value={value} />
+      <input
+        onChange={onChange}
+        type={type}
+        className={cn([styles.input, error && styles.error])}
+        id={id}
+        value={value}
+      />
       <b className={styles.errorText}>{error || ''}</b>
     </div>
   );

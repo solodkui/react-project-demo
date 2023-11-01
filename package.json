@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --quiet --fix",
+    "pre-start": "npm i && husky install",
     "create": "node scripts/create.js",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -27,8 +28,13 @@
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "eslint": "^8.45.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "prettier": "^3.0.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   },

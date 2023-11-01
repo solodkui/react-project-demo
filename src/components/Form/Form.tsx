@@ -31,7 +31,7 @@ function Form() {
         dispatchState({ type: EType.SUBMIT });
       }
     },
-    [access]
+    [access],
   );
 
   return (
@@ -51,11 +51,11 @@ function Form() {
         <div className={styles.access}>
           <Checkbox value={access} onChange={() => setAccess((p) => !p)} />
           <span>Надсилаючи цю форму, я приймаю</span>
-          <Link to='/privacy-policy' className={styles.link} target='_blank'>
+          <Link to="/privacy-policy" className={styles.link} target="_blank">
             Політику конфіденційності
           </Link>
         </div>
-        <Button type='submit' title='Відправити' text='Відправити' className={[styles.button]} />
+        <Button type="submit" title="Відправити" text="Відправити" className={[styles.button]} />
       </form>
     </Card>
   );

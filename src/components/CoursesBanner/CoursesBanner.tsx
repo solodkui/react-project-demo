@@ -25,8 +25,14 @@ function Main() {
   return (
     <div className={styles.main}>
       <h1 className={styles.title}>Курси</h1>
-      <img className={styles.image} src='/public/courses-banner.jpg' alt='Banner' />
-      <Button color='white' type='button' href='/consultation-form' text='Отримати консультацію' title='Отримати консультацію' />
+      <img className={styles.image} src="/public/courses-banner.jpg" alt="Banner" />
+      <Button
+        color="white"
+        type="button"
+        href="/consultation-form"
+        text="Отримати консультацію"
+        title="Отримати консультацію"
+      />
     </div>
   );
 }

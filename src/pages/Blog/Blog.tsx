@@ -24,7 +24,7 @@ function Blog() {
       <Wrapper>
         <Card>
           <h1 className={styles.title}>Блог</h1>
-          <div id='disqus_thread'></div>
+          <div id="disqus_thread"></div>
         </Card>
       </Wrapper>
     </div>

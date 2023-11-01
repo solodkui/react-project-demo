@@ -25,7 +25,7 @@ function Footer() {
 
 function List({ list, className }: Readonly<{ list: TList; className?: string }>) {
   return (
-    <ul className={cn([styles.list, className])} role='list'>
+    <ul className={cn([styles.list, className])} role="list">
       {list.map((item) => (
         <Item key={`Footer item - ${item.title}`} {...item} />
       ))}
@@ -35,7 +35,7 @@ function List({ list, className }: Readonly<{ list: TList; className?: string }>
 
 function Item({ title, path, icon }: Readonly<TItem>) {
   return (
-    <li role='listitem'>
+    <li role="listitem">
       <Link to={path} className={styles.link}>
         {icon && <Icon icon={icon} />}
         <span>{title}</span>

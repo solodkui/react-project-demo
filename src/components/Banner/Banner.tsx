@@ -1,5 +1,5 @@
 // * Base
-import LIST from './Banner.info';
+import LIST from './Banner.data';
 
 // * Components
 import Wrapper from '../Wrapper/Wrapper';
@@ -25,7 +25,7 @@ function Banner() {
               <div key={'Banner-title-' + title}>{title}</div>
             ))}
           </h1>
-          <Button type='button' text='Отримати консультацію' title='Отримати консультацію' href='/consultation-form' />
+          <Button type="button" text="Отримати консультацію" title="Отримати консультацію" href="/consultation-form" />
         </div>
         <div className={styles.info}>
           {LIST.map(({ title, icon }) => (
