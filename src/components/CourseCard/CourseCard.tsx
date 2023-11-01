@@ -8,17 +8,19 @@ import Button from '../Button/Button';
 // * Types
 type TProps = {
   description: string;
+  image: string;
   title: string;
   path: string;
 };
 
-function CourseCard({ title, path, description }: TProps) {
+function CourseCard({ title, path, description, image }: TProps) {
   return (
     <div className={styles.course}>
       <div className={styles.title}>
         <b>{title}</b>
       </div>
       <div className={styles.description}>{description}</div>
+      <img loading='lazy' src={image} alt={image} className={styles.image} />
       <Button type='button' href={path} text='Детальніше' title='Детальніше' className={[styles.button]} />
     </div>
   );
