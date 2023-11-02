@@ -21,7 +21,13 @@ function CourseCard({ title, path, description, image }: TProps) {
       </div>
       <div className={styles.description}>{description}</div>
       <img loading="lazy" src={image} alt={image} className={styles.image} />
-      <Button type="button" href={path} text="Детальніше" title="Детальніше" className={[styles.button]} />
+      <Button
+        href={path}
+        type="button"
+        text="Детальніше"
+        title={`Відкрити детальну сторінку: ${title}`}
+        className={[styles.button]}
+      />
     </div>
   );
 }

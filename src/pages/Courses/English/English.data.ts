@@ -11,7 +11,7 @@ export const BREADCRUMBS_LIST: TBreadcrumbsItem[] = [
     path: '/courses',
   },
   {
-    title: 'Frontend розробка',
-    path: '/courses/frontend',
+    title: 'English',
+    path: '/courses/english',
   },
 ];

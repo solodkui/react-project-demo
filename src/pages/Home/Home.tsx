@@ -7,6 +7,7 @@ import Banner from '../../components/Banner/Banner';
 
 // * Styles
 import styles from './Home.module.css';
+import { memo } from 'react';
 
 function Home() {
   useTitle({ title: 'Головна' });
@@ -19,4 +20,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default memo(Home);

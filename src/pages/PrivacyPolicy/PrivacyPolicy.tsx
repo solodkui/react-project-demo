@@ -1,19 +1,26 @@
+// * Base
+import { BREADCRUMBS_LIST } from './PrivacyPolicy.data';
+import useTitle from '../../hooks/use-title.hook';
+import { memo } from 'react';
+
 // * Components
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import Wrapper from '../../components/Wrapper/Wrapper';
 import Card from '../../components/Card/Card';
 
 // * Styles
 import styles from './PrivacyPolicy.module.css';
-import useTitle from '../../hooks/use-title.hook';
 
 function PrivacyPolicy() {
-  useTitle({ title: 'Політика конфіденційності' });
+  const title = useTitle({ title: 'Політика конфіденційності' });
 
   return (
     <section className={styles.privacyPolicy}>
       <Wrapper className={[styles.wrapper]}>
         <Card>
-          <h1 className={styles.title}>Політика конфіденційності</h1>
+          <Breadcrumbs list={BREADCRUMBS_LIST} />
+          <h1 className={styles.title}>{title}</h1>
+          {/* TODO -> Edit to list */}
           <p>Вітаємо вас на сайті Camelot Academy! Для нас дуже важлива ваша конфіденційність.</p>
           <p>
             Ця Політика конфіденційності деталізує, як ми обробляємо вашу особисту інформацію, коли ви користуєтеся
@@ -62,4 +69,4 @@ function PrivacyPolicy() {
   );
 }
 
-export default PrivacyPolicy;
+export default memo(PrivacyPolicy);

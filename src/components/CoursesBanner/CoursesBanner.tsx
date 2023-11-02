@@ -25,7 +25,7 @@ function Main() {
   return (
     <div className={styles.main}>
       <h1 className={styles.title}>Курси</h1>
-      <img className={styles.image} src="/public/courses-banner.jpg" alt="Banner" />
+      <img className={styles.image} src="/courses-banner.jpg" alt="Banner" />
       <Button
         color="white"
         type="button"

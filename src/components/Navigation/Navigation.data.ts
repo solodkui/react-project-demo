@@ -21,4 +21,16 @@ export const LIST: TItem[] = [
       },
     ],
   },
+  {
+    path: '/about',
+    title: 'Про нас',
+  },
+  {
+    path: '/blog',
+    title: 'Блог',
+  },
+  {
+    path: '/contacts',
+    title: 'Контакти',
+  },
 ];

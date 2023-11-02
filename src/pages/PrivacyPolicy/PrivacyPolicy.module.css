@@ -3,21 +3,16 @@
   padding-top: 200px;
 }
 
-.wrapper {
-  max-width: 1000px;
-}
-
 .title {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   text-align: center;
-  padding-top: 30px;
   line-height: 1;
 }
 
 .subtitle {
   margin-bottom: 10px;
   margin-top: 50px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .text {

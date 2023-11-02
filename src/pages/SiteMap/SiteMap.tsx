@@ -1,7 +1,9 @@
 // * Base
 import useTitle from '../../hooks/use-title.hook';
+import { BREADCRUMBS_LIST } from './SiteMap.data';
 
 // * Components
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import Wrapper from '../../components/Wrapper/Wrapper';
 
 // * Styles
@@ -13,7 +15,8 @@ function SiteMap() {
   return (
     <section className={styles.siteMap}>
       <Wrapper>
-        <h1>Карта сайту</h1>
+        <Breadcrumbs list={BREADCRUMBS_LIST} />
+        <h1 className={styles.title}>Карта сайту</h1>
       </Wrapper>
     </section>
   );

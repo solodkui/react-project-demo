@@ -14,6 +14,7 @@ const ConsultationForm = lazy(() => import('./pages/ConsultationForm/Consultatio
   ForTeaching = lazy(() => import('./pages/ForTeaching/ForTeaching')),
   UsefulLinks = lazy(() => import('./pages/UsefulLinks/UsefulLinks')),
   TermsOfUse = lazy(() => import('./pages/TermsOfUse/TermsOfUse')),
+  Contacts = lazy(() => import('./pages/Contacts/Contacts')),
   Support = lazy(() => import('./pages/Support/Support')),
   SiteMap = lazy(() => import('./pages/SiteMap/SiteMap')),
   Error = lazy(() => import('./pages/Error/Error')),
@@ -99,6 +100,10 @@ export default createBrowserRouter([
       {
         path: '/useful-links',
         element: <Element component={<UsefulLinks />} />,
+      },
+      {
+        path: '/contacts',
+        element: <Element component={<Contacts />} />,
       },
       {
         path: '*',

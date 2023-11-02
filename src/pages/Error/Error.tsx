@@ -1,5 +1,6 @@
 // * Base
 import useTitle from '../../hooks/use-title.hook';
+import { memo } from 'react';
 
 // * Components
 import Wrapper from '../../components/Wrapper/Wrapper';
@@ -8,13 +9,13 @@ import Wrapper from '../../components/Wrapper/Wrapper';
 import styles from './Error.module.css';
 
 function Error() {
-  useTitle({ title: '404' });
+  const title = useTitle({ title: '404: Сторінка не знайдена' });
 
   return (
     <Wrapper className={[styles.wrapper]}>
-      <h1 className={styles.title}>404: Сторінка не знайдена</h1>
+      <h1 className={styles.title}>{title}</h1>
     </Wrapper>
   );
 }
 
-export default Error;
+export default memo(Error);
