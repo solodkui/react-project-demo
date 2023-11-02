@@ -2,6 +2,7 @@
 import { ENotificationType, hideNotification } from '../../store/notification.slice';
 import { TAppDispatch } from '../../store/store';
 import { useDispatch } from 'react-redux';
+import { memo } from 'react';
 import cn from 'classnames';
 
 // * Styles
@@ -17,4 +18,4 @@ function Notification({ text, type }: { text: string; type: ENotificationType })
   );
 }
 
-export default Notification;
+export default memo(Notification);
