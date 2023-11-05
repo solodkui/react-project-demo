@@ -1,66 +1,51 @@
 // * Import modules
-import { success } from './helpers/log.js';
+import editComponentTemplate from './template/component.template.js';
+import { blueLog, redLog, success } from './helpers/log.js';
+import createReadline from './helpers/readline.js';
 import { fileURLToPath } from 'url';
-import readline from 'readline';
 import { dirname } from 'path';
-import chalk from 'chalk';
 import path from 'path';
 import fs from 'fs';
 
-// * Get current directory name
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
 // * Create readline
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+const rl = createReadline(),
+  COMPONENT_PATH = '../src/components',
+  PAGES_PATH = '../src/pages';
 
 // * Create component
 const createComponent = (componentName, pageMode) => {
-  const componentFolder = path.join(__dirname, pageMode ? '../src/pages' : '../src/components', componentName);
+  const componentFolder = path.join(
+    dirname(fileURLToPath(import.meta.url)),
+    pageMode ? PAGES_PATH : COMPONENT_PATH,
+    componentName,
+  );
 
   // Creating a component folder
   fs.mkdirSync(componentFolder);
 
   // Creating an tsx file
-  fs.writeFileSync(
-    path.join(componentFolder, `${componentName}.tsx`),
-    `// * Base
-import { memo } from 'react';
-
-// * Styles
-import styles from './${componentName}.module.css';
-
-function ${componentName}() {
-  return (
-    <div className={styles.${componentName[0].toLowerCase() + componentName.slice(1)}}>
-      <h1 className={styles.title}>${componentName}</h1>
-    </div>
-  );
-}
-
-export default memo(${componentName});
-`,
-  );
+  fs.writeFileSync(path.join(componentFolder, `${componentName}.tsx`), editComponentTemplate(componentName));
 
   // Creating a css file
-  fs.writeFileSync(path.join(componentFolder, `${componentName}.module.css`), '');
+  fs.writeFileSync(
+    path.join(componentFolder, `${componentName}.module.css`),
+    `.${componentName[0].toLowerCase() + componentName.slice(1)} {}`,
+  );
 
+  // Show success message
   success(`The ${componentName} component was created successfully`);
 };
 
 // * Requesting a component name in the terminal
-rl.question(chalk.blue.bgBlack.bold(' Enter the name of the component: '), (componentName) => {
+rl.question(blueLog(' Enter the name of the component: '), (componentName) => {
   rl.question(
-    chalk.blue.bgBlack.bold(" It's page?(") +
-      chalk.red.bgBlack.bold('y') +
-      chalk.blue.bgBlack.bold('/') +
-      chalk.red.bgBlack.bold('n') +
-      chalk.blue.bgBlack.bold(', default ') +
-      chalk.red.bgBlack.bold('n') +
-      chalk.blue.bgBlack.bold('): '),
+    blueLog(" It's page?(") +
+      redLog('y') +
+      blueLog('/') +
+      redLog('n') +
+      blueLog(', default ') +
+      redLog('n') +
+      blueLog('): '),
     (pageMode) => {
       createComponent(componentName, pageMode.toLocaleLowerCase() === 'y');
       rl.close();

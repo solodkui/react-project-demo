@@ -1,5 +1,5 @@
 // * Base
-import { EType, INITIAL_STATE, TValues, reducer } from './Form.state';
+import { EType, INITIAL_STATE, TValuesKeys, reducer } from './Form.state';
 import { FormEvent, useCallback, useReducer, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { LIST } from './Form.data';
@@ -17,7 +17,7 @@ function Form() {
   const [state, dispatchState] = useReducer(reducer, INITIAL_STATE);
   const [access, setAccess] = useState<boolean>(false);
 
-  const onChange = useCallback((name: TValues, value: string) => {
+  const onChange = useCallback((name: TValuesKeys, value: string) => {
     dispatchState({ type: EType.SET_VALUE, payload: { name, value } });
   }, []);
 
@@ -28,8 +28,10 @@ function Form() {
       e.preventDefault();
 
       if (access) {
-        dispatchState({ type: EType.SUBMIT });
+        return dispatchState({ type: EType.SUBMIT });
       }
+
+      dispatchState({ type: EType.TOUCHED_ALL });
     },
     [access],
   );

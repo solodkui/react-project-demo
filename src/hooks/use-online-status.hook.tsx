@@ -2,11 +2,11 @@
 import { useCallback, useDebugValue, useEffect, useState } from 'react';
 
 function useOnlineStatus() {
-  const [isOnline, setIsOnline] = useState<boolean>(true);
-  useDebugValue(isOnline ? 'Online' : 'Offline');
+  const [isOnline, setIsOnline] = useState<boolean>(true),
+    setOnlineStatus = useCallback(() => setIsOnline(true), []),
+    setOfflineStatus = useCallback(() => setIsOnline(false), []);
 
-  const setOnlineStatus = useCallback(() => setIsOnline(true), []);
-  const setOfflineStatus = useCallback(() => setIsOnline(false), []);
+  useDebugValue(isOnline ? 'Online' : 'Offline');
 
   useEffect(() => {
     window.addEventListener('online', setOnlineStatus);

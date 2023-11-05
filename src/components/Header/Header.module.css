@@ -23,3 +23,8 @@
   padding-top: 20px;
   display: flex;
 }
+
+.logo {
+  position: relative;
+  z-index: 901;
+}

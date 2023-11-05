@@ -2,7 +2,7 @@
   background-color: var(--c-blue);
   position: fixed;
   height: 140px;
-  z-index: 300;
+  z-index: 200;
   bottom: 0;
   right: 0;
   left: 0;

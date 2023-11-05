@@ -1,4 +1,4 @@
-.wrapper {
+.logo {
   transition: color var(--t-normal);
   color: var(--c-blue);
   align-items: center;
@@ -51,4 +51,18 @@
 
 .small .subtitle {
   font-size: 0;
+}
+
+@media (max-width: 1024px) {
+  .icon {
+    font-size: 40px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    display: none;
+  }
 }

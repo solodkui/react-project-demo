@@ -1,0 +1,39 @@
+.burger {
+  flex-direction: column;
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  padding: 5px;
+  z-index: 901;
+}
+
+.burger:hover .line {
+  background-color: var(--c-blue);
+}
+
+.line {
+  background-color: var(--c-black);
+  transition: var(--t-normal);
+  margin-bottom: 5px;
+  border-radius: 3px;
+  width: 35px;
+  height: 5px;
+}
+
+.line:last-child {
+  margin-bottom: 0;
+}
+
+.open .line {
+  opacity: 0;
+}
+
+.open .line:first-child {
+  transform: rotate(45deg) translate(8px, 7px);
+  opacity: 1;
+}
+
+.open .line:last-child {
+  transform: rotate(-45deg) translate(8px, -5px);
+  opacity: 1;
+}

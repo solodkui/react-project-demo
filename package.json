@@ -1,18 +1,18 @@
 {
   "name": "camelot-academy-landing",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --quiet --fix",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.js",
+    "build:client": "vite build --outDir dist/client",
     "pre-start": "npm i && husky install",
     "create": "node scripts/create.js",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "dev": "vite",
     "dev:ssr": "node server",
-    "build:client": "vite build --outDir dist/client",
-    "build:server": "vite build --outDir dist/server --ssr src/entry-server.js"
+    "dev": "vite"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",

@@ -1,4 +1,3 @@
-/* * List */
 .list {
   grid-gap: 20px;
   display: flex;
@@ -17,6 +16,7 @@
 .item {
   position: relative;
   padding: 10px;
+  text-align: center;
 }
 
 .item:hover .sublist {
@@ -26,7 +26,6 @@
   opacity: 1;
 }
 
-/* * Sublist */
 .sublist {
   background-color: var(--c-blue);
   transition: var(--t-normal);
@@ -40,6 +39,7 @@
   right: 0;
 }
 
+/* TODO -> Change in media */
 .sublist:hover {
   display: block;
 }
@@ -61,4 +61,50 @@
 
 .sublink:hover {
   color: var(--c-orange);
+}
+
+@media (max-width: 1024px) {
+  .navigation {
+    transition: var(--t-normal);
+    background-color: var(--c-white);
+    justify-content: center;
+    pointer-events: none;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    z-index: 900;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+
+  .navigation.show {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sublist {
+    background-color: var(--c-white);
+    padding-top: 20px;
+    position: relative;
+    max-height: 3000px;
+    display: block;
+    opacity: 1;
+  }
+
+  .item:hover .sublist {
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+
+  .sublink {
+    color: var(--c-blue);
+  }
 }
