@@ -14,18 +14,21 @@ import Offline from './components/Offline/Offline';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
+// * Styles
+import styles from './App.module.css';
+
 // * Online
 function Online() {
   const notificationData = useSelector((s: TRootState) => s.notification);
 
   return (
-    <>
+    <div className={styles.app}>
       <Header />
       <Outlet />
       <Background />
       {notificationData.text && <Notification {...notificationData} />}
       <Footer />
-    </>
+    </div>
   );
 }
 

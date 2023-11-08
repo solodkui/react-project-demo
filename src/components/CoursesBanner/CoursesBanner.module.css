@@ -1,13 +1,13 @@
 /* * Base */
 .coursesBanner {
   background-color: var(--c-blue-dark);
-  height: calc(100vh - 140px);
   justify-content: center;
   color: var(--c-white);
   padding-bottom: 5vh;
   align-items: center;
   padding-top: 140px;
   display: flex;
+  height: 100vh;
 }
 
 .wrapper {

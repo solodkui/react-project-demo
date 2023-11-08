@@ -60,6 +60,7 @@ body {
   background-color: var(--c-silver);
   font-family: var(--f-base);
   color: var(--c-blue);
+  min-height: 100vh;
   font-size: 16px;
 }
 

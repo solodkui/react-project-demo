@@ -9,7 +9,7 @@ import styles from './FaqContent.module.css';
 
 function FaqContent() {
   return (
-    <section className={styles.faq}>
+    <section className={styles.faqContent}>
       <Wrapper className={[styles.wrapper]}>
         <h2 className={styles.title}>Часто задаваємі питання</h2>
         <FaqList />

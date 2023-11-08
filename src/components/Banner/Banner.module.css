@@ -1,6 +1,6 @@
 .banner {
-  height: calc(100vh - 140px);
   display: flex;
+  height: 100vh;
 }
 
 .wrapper {
